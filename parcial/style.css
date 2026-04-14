@@ -1,0 +1,207 @@
+/*ESTILO GENERAL*/
+
+/*esto hace transicion mas lenta cuando apretamos algun boton con desplazamiento por ej el inicio o los productos*/
+html 
+{
+    scroll-behavior: smooth;
+}
+/*el color y la fuente de la pagina*/
+body 
+{
+  background: linear-gradient(180deg, #f9fff6 0%, #e8f5e9 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*NAVBAR*/
+
+/*el color del navbar y la transicion de la sombra*/
+.navbar-custom 
+{
+    background-color: #6BA862 !important;
+    transition: box-shadow 0.3s ease;
+}
+/*el ancho del logo y su altura*/
+.navbar-brand img {
+    max-width: 220px;
+    height: auto;
+}
+/*color de donde estaran los links de los botones,tamaño y transicion*/
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+/*color al pasar el cursor por encima*/
+.navbar-nav .nav-link:hover {
+    color: #FFD54F !important;
+}
+
+/*Ajustes de botones del navbar*/
+.navbar .btn {
+    font-weight: 500;
+}
+
+#carrito-contador {
+    font-size: 0.8rem;
+}
+
+
+/* CARRUSEL*/
+
+/*altura de las fotos, ajustar la imagen en el contenedor,la posicion de la foto en el contenedor y el fondo*/
+.carousel-image {
+    height: 400px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #b9cc2a;
+}
+
+/*superposicion del texto en el carrusel con su color, bordes,tamaño interno,etc*/
+.carousel-caption-custom {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 15px 20px;
+    left: 15%;
+    right: 15%;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+/*modifica titulos h5 para el carrusel*/
+.carousel-caption-custom h5 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+/*modifica titulos p para el carrusel*/
+.carousel-caption-custom p {
+    font-size: 1rem !important;
+    margin-bottom: 12px;
+}
+
+/*diseño del boton del slide del carrusel*/
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+/*SECCION DE PRODUCTOS*/
+
+/*modificamos titulos h2 para la seccion de productos*/
+#productos h2 {
+    color: #4c8044;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+
+/*Cards de productos*/
+
+/*el borde, transicion y esquinas de las cartas de los productos*/
+#lista-productos .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+}
+
+/*lo que sucede si pasamos el mouse por encima de las cards*/
+#lista-productos .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/*el como se vera la imagen de las cartas*/
+#lista-productos .card img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/*boton agregar carrito*/
+
+/*como se vera los botones de agregar al carrito*/
+.btn-agregar {
+    transition: all 0.2s ease;
+}
+
+/*como se vera cuando pase el mouse por encima*/
+.btn-agregar:hover {
+    transform: scale(1.05);
+}
+
+/*MODAL DEL CARRITO*/
+
+/*bajo el tamaño de la fuente*/
+.carrito-item {
+    font-size: 0.95rem;
+}
+
+/*FOOTER*/
+
+/*estilo del footer*/
+footer {
+    background-color: #6BA862;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/*MEDIA QUERIES (RESPONSIVE)*/
+
+/*Tablets y pantallas medianas*/
+@media (max-width: 992px) {
+    .navbar-brand img {
+        max-width: 180px;
+    }
+
+    .carousel-image {
+        height: 300px;
+    }
+
+    #lista-productos .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/*Celulares*/
+@media (max-width: 768px) {
+    .carousel-caption-custom {
+        padding: 10px 15px;
+        bottom: 10px;
+        left: 10%;
+        right: 10%;
+        max-width: 85%;
+    }
+
+    .carousel-caption-custom h5 {
+        font-size: 1.1rem;
+    }
+
+    .carousel-caption-custom p {
+        font-size: 0.85rem !important;
+    }
+
+    .carousel-caption-custom .btn {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+
+    #lista-productos .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .navbar-brand img {
+        max-width: 160px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 10px 0;
+    }
+}
